@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, Globe, Zap, BarChart3, Headphones, ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Link } from "wouter";
 
 /**
  * Futuristic Minimalism Design:
@@ -64,7 +65,6 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm hover:text-cyan-400 transition">Services</a>
             <a href="#platform" className="text-sm hover:text-cyan-400 transition">Platform</a>
-            <a href="#a2p-verification" className="text-sm hover:text-cyan-400 transition">A2P Verify</a>
             <a href="#contact" className="text-sm hover:text-cyan-400 transition">Contact</a>
           </div>
           <Button variant="outline" size="sm" onClick={() => scrollTo("services")}>Get Started</Button>
@@ -808,10 +808,10 @@ export default function Home() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
               style={{ fontFamily: "Poppins" }}
             >
-              A2P <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">10DLC Verification</span>
+              Let's <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Automate Your Business</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Complete this form to verify your business for A2P 10DLC compliance. This ensures your messages are delivered reliably and in accordance with carrier regulations.
+              Ready to scale your sales without hiring more staff? Let's chat about how AI agents can transform your business.
             </p>
           </div>
 
@@ -839,6 +839,13 @@ export default function Home() {
                   title="A2P 10DLC Compliant Form"
                 />
               </div>
+              {/* Privacy & Terms consent links */}
+              {/* <p className="text-center text-xs text-muted-foreground mt-4">
+                By submitting this form, you agree to our{" "}
+                <Link href="/PrivacyPolicy" className="text-cyan-400 hover:underline">Privacy Policy</Link>{" "}
+                and{" "}
+                <Link href="/TermsOfService" className="text-purple-400 hover:underline">Terms of Service</Link>.
+              </p> */}
             </div>
           </div>
         </div>
@@ -874,8 +881,8 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#a2p-verification" className="hover:text-cyan-400 transition">Privacy</a></li>
-                <li><a href="#a2p-verification" className="hover:text-cyan-400 transition">Terms</a></li>
+                <li><Link href="/privacy-policy" className="hover:text-cyan-400 transition">Privacy Policy</Link></li>
+                <li><Link href="/terms-of-service" className="hover:text-cyan-400 transition">Terms of Service</Link></li>
                 <li><a href="#contact" className="hover:text-cyan-400 transition">Contact</a></li>
               </ul>
             </div>
