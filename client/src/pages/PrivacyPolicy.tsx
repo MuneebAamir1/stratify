@@ -545,7 +545,7 @@ export default function PrivacyPolicy() {
                 <p className="text-foreground font-bold text-lg" style={{ fontFamily: "Poppins" }}>Stratify Systems AI</p>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Globe className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                  <a href="https://stratifyai.manus.space" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">stratifyai.manus.space</a>
+                  <a href="https://stratify-systems-ai.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">stratify-systems-ai.com</a>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
