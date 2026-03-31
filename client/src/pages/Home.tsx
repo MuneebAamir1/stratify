@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, Globe, Zap, BarChart3, Headphones, ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 /**
  * Futuristic Minimalism Design:
@@ -50,6 +50,8 @@ function useScrollReveal() {
 export default function Home() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const pageRef = useScrollReveal();
+  const [, navigate] = useLocation();
+  const navigateToForm = () => navigate("/form");
 
   return (
     <div ref={pageRef} className="min-h-screen bg-background text-foreground">
@@ -65,7 +67,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm hover:text-cyan-400 transition">Services</a>
             <a href="#platform" className="text-sm hover:text-cyan-400 transition">Platform</a>
-            <a href="#contact" className="text-sm hover:text-cyan-400 transition">Contact</a>
+            <Link href="/form" className="text-sm hover:text-cyan-400 transition">Contact</Link>
           </div>
           <Button variant="outline" size="sm" onClick={() => scrollTo("services")}>Get Started</Button>
         </div>
@@ -93,7 +95,7 @@ export default function Home() {
               Deploy intelligent voice, text, and website agents powered by advanced AI. Automate lead qualification, nurturing, and booking—24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" onClick={() => scrollTo("contact")}>
+              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" onClick={navigateToForm}>
                 Book a Free Consultation Call
               </Button>
             </div>
@@ -320,7 +322,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" onClick={() => scrollTo("contact")}>
+              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" onClick={navigateToForm}>
                 Explore Platform
               </Button>
             </div>
@@ -432,7 +434,7 @@ export default function Home() {
                   <span className="text-sm">Lead Qualification & Scoring</span>
                 </li>
               </ul>
-              <Button size="lg" variant="outline" className="w-full" onClick={() => scrollTo("contact")}>
+              <Button size="lg" variant="outline" className="w-full" onClick={navigateToForm}>
                 Learn More
               </Button>
             </div>
@@ -478,7 +480,7 @@ export default function Home() {
                   <span className="text-sm">Campaign Optimization & A/B Testing</span>
                 </li>
               </ul>
-              <Button size="lg" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-black font-semibold" onClick={() => scrollTo("contact")}>
+              <Button size="lg" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-black font-semibold" onClick={navigateToForm}>
                 Learn More
               </Button>
             </div>
@@ -553,7 +555,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-8">
               Every business is unique. Let's discuss which Stratify AI solution is right for you and how we can help you scale.
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-black font-semibold" onClick={() => scrollTo("contact")}>
+            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-black font-semibold" onClick={navigateToForm}>
               Book Your Free Consultation Call
             </Button>
           </div>
@@ -742,7 +744,7 @@ export default function Home() {
             Join leading companies using AI agents to scale their sales operations. Start your free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" onClick={() => scrollTo("a2p-verification")}>
+            <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold" onClick={navigateToForm}>
               Book a Free Consultation Call
             </Button>
           </div>
@@ -800,56 +802,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* A2P 10DLC Verification Form */}
-      <section id="a2p-verification" className="py-14 md:py-20 border-t border-border scroll-reveal reveal-up" style={{ animationDuration: '1s' }}>
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
-              style={{ fontFamily: "Poppins" }}
-            >
-              Let's <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Automate Your Business</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ready to scale your sales without hiring more staff? Let's chat about how AI agents can transform your business.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <div className="relative rounded-2xl border border-border bg-card/50 p-1 overflow-hidden">
-              {/* Gradient glow border effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 pointer-events-none" />
-              <div className="relative rounded-xl overflow-hidden bg-card" style={{ minHeight: "820px" }}>
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/sqQ8FqKicDfe5HG6svRN"
-                  className="iframe-dark-theme"
-                  style={{ width: "100%", height: "802px", border: "none", borderRadius: "12px" }}
-                  id="inline-sqQ8FqKicDfe5HG6svRN"
-                  data-layout='{"id":"INLINE"}'
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="A2P 10DLC Compliant Form"
-                  data-height="802"
-                  data-layout-iframe-id="inline-sqQ8FqKicDfe5HG6svRN"
-                  data-form-id="sqQ8FqKicDfe5HG6svRN"
-                  title="A2P 10DLC Compliant Form"
-                />
-              </div>
-              {/* Privacy & Terms consent links */}
-              {/* <p className="text-center text-xs text-muted-foreground mt-4">
-                By submitting this form, you agree to our{" "}
-                <Link href="/PrivacyPolicy" className="text-cyan-400 hover:underline">Privacy Policy</Link>{" "}
-                and{" "}
-                <Link href="/TermsOfService" className="text-purple-400 hover:underline">Terms of Service</Link>.
-              </p> */}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="border-t border-border py-8 md:py-12 bg-card/50">
@@ -874,8 +826,8 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#platform" className="hover:text-cyan-400 transition">About</a></li>
-                <li><a href="#contact" className="hover:text-cyan-400 transition">Blog</a></li>
-                <li><a href="#contact" className="hover:text-cyan-400 transition">Careers</a></li>
+                <li><Link href="/form" className="hover:text-cyan-400 transition">Blog</Link></li>
+                <li><Link href="/form" className="hover:text-cyan-400 transition">Careers</Link></li>
               </ul>
             </div>
             <div>
@@ -883,7 +835,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/privacy-policy" className="hover:text-cyan-400 transition">Privacy Policy</Link></li>
                 <li><Link href="/terms-of-service" className="hover:text-cyan-400 transition">Terms of Service</Link></li>
-                <li><a href="#contact" className="hover:text-cyan-400 transition">Contact</a></li>
+                <li><Link href="/form" className="hover:text-cyan-400 transition">Contact</Link></li>
               </ul>
             </div>
           </div>
