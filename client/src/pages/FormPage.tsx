@@ -22,6 +22,7 @@ export default function FormPage() {
   const [, navigate] = useLocation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const gsap = window.gsap;
     const ScrollTrigger = window.ScrollTrigger;
     if (!gsap) return;

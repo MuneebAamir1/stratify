@@ -1,7 +1,10 @@
 import { ArrowLeft, Shield, Mail, Phone, Globe } from "lucide-react";
+import { useEffect } from "react";
 import { Link } from "wouter";
 
 export default function PrivacyPolicy() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation Bar */}

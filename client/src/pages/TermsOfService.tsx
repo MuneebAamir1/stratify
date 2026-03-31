@@ -1,7 +1,10 @@
 import { ArrowLeft, Shield, Mail, Phone, Globe, MessageSquare, CreditCard, Scale, FileText, AlertTriangle } from "lucide-react";
+import { useEffect } from "react";
 import { Link } from "wouter";
 
 export default function TermsOfService() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation Bar */}
@@ -216,7 +219,7 @@ export default function TermsOfService() {
                   <div className="p-4 rounded-xl border border-border bg-background/50">
                     <h3 className="font-semibold text-foreground mb-2 text-sm">Opt-Out</h3>
                     <p className="text-muted-foreground text-xs">
-                      Text <span className="text-purple-400 font-mono font-bold">STOP</span> to <span className="text-purple-400">+4591653072</span> to cancel. You&apos;ll receive a confirmation and no further messages will be sent.
+                      Reply <span className="text-purple-400 font-mono font-bold">STOP</span> to cancel. You&apos;ll receive a confirmation and no further messages will be sent.
                     </p>
                   </div>
                   <div className="p-4 rounded-xl border border-border bg-background/50">
@@ -248,6 +251,16 @@ export default function TermsOfService() {
                   <p className="text-sm text-cyan-400/90 font-semibold mb-1">Consent Not Required for Purchase</p>
                   <p className="text-muted-foreground text-xs">
                     Your consent to receive SMS messages is not a condition of purchasing any product or service. Text messaging originator opt-in data and consent will not be shared with any third parties, except for aggregators and providers of the Text Message services.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5">
+                  <p className="text-yellow-400/80 text-xs font-semibold flex items-center gap-2">
+                    <AlertTriangle className="w-4 h-4" />
+                    Age Requirement
+                  </p>
+                  <p className="text-muted-foreground text-xs mt-1">
+                    You must be 18 years of age or older to use this SMS service. By opting in to receive SMS communications from Stratify Systems AI, you confirm that you are at least 18 years old. If we discover that a person under the age of 18 has opted in, we will promptly remove their information and cease all SMS communications.
                   </p>
                 </div>
               </div>
