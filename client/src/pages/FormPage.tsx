@@ -15,6 +15,7 @@ export default function FormPage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
+  const formCardRef = useRef<HTMLDivElement>(null);
   const orbRef1 = useRef<HTMLDivElement>(null);
   const orbRef2 = useRef<HTMLDivElement>(null);
   const orbRef3 = useRef<HTMLDivElement>(null);
@@ -119,6 +120,74 @@ export default function FormPage() {
             : undefined,
         }
       );
+    }
+
+    /* --- Interactive 3D tilt on the form card --- */
+    const formCard = formCardRef.current;
+    if (formCard && gsap) {
+      const handleMouseMove = (e: MouseEvent) => {
+        const rect = formCard.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width - 0.5) * 8;
+        const y = ((e.clientY - rect.top) / rect.height - 0.5) * -8;
+        gsap.to(formCard, {
+          rotateY: x,
+          rotateX: y,
+          duration: 0.5,
+          ease: "power2.out",
+          overwrite: "auto",
+        });
+      };
+      const handleMouseLeave = () => {
+        gsap.to(formCard, {
+          rotateY: 0,
+          rotateX: 0,
+          duration: 0.8,
+          ease: "elastic.out(1, 0.4)",
+          overwrite: "auto",
+        });
+      };
+      /* Touch support for mobile */
+      const handleTouchMove = (e: TouchEvent) => {
+        const touch = e.touches[0];
+        if (!touch) return;
+        const rect = formCard.getBoundingClientRect();
+        const x = ((touch.clientX - rect.left) / rect.width - 0.5) * 6;
+        const y = ((touch.clientY - rect.top) / rect.height - 0.5) * -6;
+        gsap.to(formCard, {
+          rotateY: x,
+          rotateX: y,
+          duration: 0.5,
+          ease: "power2.out",
+          overwrite: "auto",
+        });
+      };
+      const handleTouchEnd = () => {
+        gsap.to(formCard, {
+          rotateY: 0,
+          rotateX: 0,
+          duration: 0.8,
+          ease: "elastic.out(1, 0.4)",
+          overwrite: "auto",
+        });
+      };
+
+      formCard.addEventListener("mousemove", handleMouseMove);
+      formCard.addEventListener("mouseleave", handleMouseLeave);
+      formCard.addEventListener("touchmove", handleTouchMove, { passive: true });
+      formCard.addEventListener("touchend", handleTouchEnd);
+
+      // Cleanup
+      const cleanupFormCard = () => {
+        formCard.removeEventListener("mousemove", handleMouseMove);
+        formCard.removeEventListener("mouseleave", handleMouseLeave);
+        formCard.removeEventListener("touchmove", handleTouchMove);
+        formCard.removeEventListener("touchend", handleTouchEnd);
+      };
+
+      return () => {
+        cleanupFormCard();
+        if (ScrollTrigger) ScrollTrigger.getAll().forEach((t: any) => t.kill());
+      };
     }
 
     return () => {
@@ -402,6 +471,7 @@ export default function FormPage() {
 
             {/* Glassmorphism form container */}
             <div
+              ref={formCardRef}
               className="relative rounded-3xl overflow-hidden"
               style={{
                 background:
@@ -411,6 +481,8 @@ export default function FormPage() {
                 border: "1px solid rgba(255,255,255,0.06)",
                 boxShadow:
                   "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
+                transformStyle: "preserve-3d",
+                willChange: "transform",
               }}
             >
               {/* Animated gradient border */}

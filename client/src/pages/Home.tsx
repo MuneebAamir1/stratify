@@ -77,7 +77,7 @@ export default function Home() {
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden scroll-reveal reveal-up" style={{ animationDuration: '1.1s' }}>
         <div className="absolute inset-0 opacity-50">
           <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663380626562/npYcoS56irkU9VnnMQFbwb/hero-meta-ads-final-S6iaC9dyJLAS97eoQt2cKs.webp"
+            src="/hero-bg.jpeg"
             alt="Hero Background"
             className="w-full h-full object-cover"
           />
