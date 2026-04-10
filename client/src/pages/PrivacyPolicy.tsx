@@ -144,10 +144,6 @@ export default function PrivacyPolicy() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
-                  Meta Ads (Facebook/Instagram) lead generation campaigns
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
                   Direct communications you initiate with our team
                 </li>
                 <li className="flex items-start gap-3">
@@ -180,10 +176,6 @@ export default function PrivacyPolicy() {
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
                   Send SMS and email communications for service updates, follow-ups, and scheduling (only with your consent)
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
-                  Run and optimize paid advertising campaigns through Meta Ads
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />
@@ -256,7 +248,7 @@ export default function PrivacyPolicy() {
                     <p className="text-muted-foreground text-sm">
                       Reply <span className="text-cyan-400 font-mono font-bold">HELP</span> to any SMS or contact us at{" "}
                       <a href="mailto:uzair@stratify-systems-ai.com" className="text-cyan-400 hover:underline">uzair@stratify-systems-ai.com</a>{" "}
-                      or <span className="text-cyan-400">+4591653072</span>.
+                      or <span className="text-cyan-400">+19178637265</span>.
                     </p>
                   </div>
                 </div>
@@ -277,7 +269,7 @@ export default function PrivacyPolicy() {
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
-                No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Information sharing to subcontractors in support services, such as customer service, is permitted. All other use case categories exclude text messaging originator opt-in data and consent.
+                No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service, is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
               </p>
 
               <p className="text-muted-foreground leading-relaxed mb-4 text-sm">We may share your information only in the following limited circumstances:</p>
@@ -325,20 +317,14 @@ export default function PrivacyPolicy() {
                   </p>
                 </div>
                 <div className="p-4 rounded-xl border border-border bg-background/50">
-                  <h3 className="font-semibold text-foreground mb-2 text-sm">Meta Pixel</h3>
-                  <p className="text-muted-foreground text-sm">
-                    A tracking pixel placed by Meta Platforms (Facebook/Instagram) to measure the effectiveness of our advertising campaigns and to build custom audiences for ad targeting.
-                  </p>
-                </div>
-                <div className="p-4 rounded-xl border border-border bg-background/50">
-                  <h3 className="font-semibold text-foreground mb-2 text-sm">Analytics Tools</h3>
+                  <h3 className="font-semibold text-foreground mb-2 text-sm">Web Analytics</h3>
                   <p className="text-muted-foreground text-sm">
                     We may use web analytics tools to understand traffic patterns and improve our site.
                   </p>
                 </div>
               </div>
               <p className="text-xs text-muted-foreground/70 mt-4">
-                You may control cookie settings through your browser preferences. You may also opt out of Meta&apos;s ad tracking through your Facebook account settings or the Digital Advertising Alliance opt-out tool at{" "}
+                You may control cookie settings through your browser preferences. For more information about online advertising choices, visit{" "}
                 <a href="https://aboutads.info" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">aboutads.info</a>.
               </p>
             </div>
@@ -416,16 +402,6 @@ export default function PrivacyPolicy() {
                     We use Retell AI to power our AI voice agent services. Retell AI processes voice interaction data solely for delivering AI voice agent functionality on our behalf and is contractually prohibited from using your data for independent marketing purposes.
                   </p>
                 </div>
-                <div className="p-4 rounded-xl border border-border bg-background/50">
-                  <h3 className="font-semibold text-foreground mb-2 text-sm flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-cyan-400" />
-                    Meta Ads (Facebook/Instagram)
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    We run paid advertising campaigns through Meta Platforms. Meta may collect data about your interactions with our ads through the Meta Pixel. Meta&apos;s use of this data is governed by{" "}
-                    <a href="https://facebook.com/policy" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Meta&apos;s Data Policy</a>.
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -476,7 +452,7 @@ export default function PrivacyPolicy() {
                 <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-cyan-600 text-black text-sm font-bold">11</span>
                 Opt-Out Instructions
               </h2>
-              <div className="grid sm:grid-cols-3 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl border border-border bg-background/50 text-center">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mx-auto mb-3">
                     <Phone className="w-5 h-5 text-black" />
@@ -495,20 +471,10 @@ export default function PrivacyPolicy() {
                     Click &quot;Unsubscribe&quot; in any marketing email footer
                   </p>
                 </div>
-                <div className="p-4 rounded-xl border border-border bg-background/50 text-center">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-5 h-5 text-black" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2 text-sm">Ads Opt-Out</h3>
-                  <p className="text-muted-foreground text-xs">
-                    Visit{" "}
-                    <a href="https://aboutads.info" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">aboutads.info</a>
-                  </p>
-                </div>
               </div>
             </div>
 
-            {/* ─── 12. Children's Information ─────────────────── */}
+            {/* ─── 12. Children's Information ────────────────────── */}
             <div className="group p-8 rounded-2xl border border-border bg-card/50 hover:border-purple-400/30 transition-all duration-300">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-3" style={{ fontFamily: "Poppins" }}>
                 <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 text-white text-sm font-bold">12</span>
@@ -556,7 +522,7 @@ export default function PrivacyPolicy() {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                  <a href="tel:+4591653072" className="text-cyan-400 hover:underline">+4591653072</a>
+                  <a href="tel:+19178637265" className="text-cyan-400 hover:underline">+19178637265</a>
                 </div>
               </div>
             </div>
