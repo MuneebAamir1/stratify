@@ -499,8 +499,7 @@ export default function FormPage() {
 
               {/* Chat Widget CTA */}
               <div
-                className="relative p-8 md:p-12 flex flex-col items-center justify-center text-center"
-                style={{ minHeight: "600px" }}
+                className="relative p-8 md:p-12 flex flex-col items-center justify-center text-center py-16"
               >
                 <div className="max-w-2xl mx-auto">
                   <div className="mb-8">
