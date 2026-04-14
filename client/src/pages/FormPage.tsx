@@ -328,9 +328,7 @@ export default function FormPage() {
             </h1>
 
             <p className="hero-anim text-base sm:text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-              Ready to scale your sales without hiring more staff? Complete the
-              form below and our team will craft a custom AI solution for your
-              business.
+              Ready to scale your sales without hiring more staff? Use the chat widget below to connect with our team and get started with your AI automation journey.
             </p>
 
             {/* Scroll indicator */}
@@ -340,7 +338,7 @@ export default function FormPage() {
                 className="group flex flex-col items-center gap-1"
               >
                 <span className="text-xs text-muted-foreground group-hover:text-cyan-400 transition">
-                  Fill the form below
+                  Start chatting below
                 </span>
                 <svg
                   className="w-5 h-5 text-cyan-400 animate-bounce"
@@ -465,8 +463,7 @@ export default function FormPage() {
                 </span>
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Fill out the form below and our AI consultants will get back to
-                you within 24 hours with a custom automation strategy.
+                Use the chat widget to connect with our AI consultants. We'll respond within 24 hours with a custom automation strategy.
               </p>
             </div>
 
