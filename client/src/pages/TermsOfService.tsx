@@ -211,23 +211,23 @@ export default function TermsOfService() {
                     Program Description
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    When you opt in, you may receive appointment reminders and confirmations related to services you have booked, as well as follow-up messages from our AI text agent system regarding your inquiry or ongoing service engagement.
+                    <strong>Program Name:</strong> Stratify Systems AI Notifications. Users will receive appointment reminders, service updates, and follow-up communications from our AI agents regarding their inquiries.
                   </p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl border border-border bg-background/50">
-                    <h3 className="font-semibold text-foreground mb-2 text-sm">Opt-Out</h3>
+                    <h3 className="font-semibold text-foreground mb-2 text-sm">Opt-Out Instructions</h3>
                     <p className="text-muted-foreground text-xs">
-                      Reply <span className="text-purple-400 font-mono font-bold">STOP</span> to cancel. You&apos;ll receive a confirmation and no further messages will be sent.
+                      You can cancel the SMS service at any time. Simply text <span className="text-purple-400 font-mono font-bold">STOP</span> to our number. Upon sending "STOP," we will confirm your unsubscribe status via SMS. Following this confirmation, you will no longer receive SMS messages from us. To rejoin, sign up via our website form as you did initially.
                     </p>
                   </div>
                   <div className="p-4 rounded-xl border border-border bg-background/50">
-                    <h3 className="font-semibold text-foreground mb-2 text-sm">Help</h3>
+                    <h3 className="font-semibold text-foreground mb-2 text-sm">Help Instructions</h3>
                     <p className="text-muted-foreground text-xs">
-                      Reply <span className="text-purple-400 font-mono font-bold">HELP</span> or contact{" "}
+                      If you experience issues with the messaging program, reply with the keyword <span className="text-purple-400 font-mono font-bold">HELP</span> for assistance, or reach out directly to{" "}
                       <a href="mailto:uzair@stratify-systems-ai.com" className="text-cyan-400 hover:underline">uzair@stratify-systems-ai.com</a>{" "}
-                      or <span className="text-purple-400">+4591653072</span>.
+                      or <span className="text-purple-400">+19178637265</span>.
                     </p>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function TermsOfService() {
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
-                    <span><strong className="text-foreground">Message Frequency:</strong> You will receive appointment-based messages as triggered by your scheduled appointments and service interactions.</span>
+                    <span><strong className="text-foreground">Message Frequency:</strong> You will receive appointment-based messages as triggered by your scheduled appointments and service interactions. Message frequency varies.</span>
                   </div>
                 </div>
 
@@ -453,7 +453,7 @@ export default function TermsOfService() {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Phone className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                  <a href="tel:+4591653072" className="text-purple-400 hover:underline">+4591653072</a>
+                  <a href="tel:+19178637265" className="text-purple-400 hover:underline">+19178637265</a>
                 </div>
               </div>
             </div>
