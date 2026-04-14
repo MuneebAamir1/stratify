@@ -470,78 +470,49 @@ export default function FormPage() {
               </p>
             </div>
 
-            {/* Glassmorphism form container */}
-            <div
-              ref={formCardRef}
-              className="relative rounded-3xl overflow-hidden"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
-                backdropFilter: "blur(24px) saturate(180%)",
-                WebkitBackdropFilter: "blur(24px) saturate(180%)",
-                border: "1px solid rgba(255,255,255,0.06)",
-                boxShadow:
-                  "0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
-                transformStyle: "preserve-3d",
-                willChange: "transform",
-              }}
-            >
-              {/* Animated gradient border */}
-              <div
-                className="absolute inset-0 rounded-3xl pointer-events-none"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(0,217,255,0.12), transparent 40%, transparent 60%, rgba(124,58,237,0.12))",
-                }}
-              />
-              {/* Top shine */}
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent" />
-
-              {/* Chat Widget CTA */}
-              <div
-                className="relative p-8 md:p-12 flex flex-col items-center justify-center text-center py-16"
-              >
-                <div className="max-w-2xl mx-auto">
-                  <div className="mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                      <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    </div>
+            {/* Chat Widget CTA Section */}
+            <div className="mt-12 mb-12 p-8 md:p-12 rounded-3xl border border-cyan-500/20 bg-gradient-to-br from-cyan-500/5 to-purple-500/5">
+              <div className="max-w-2xl mx-auto text-center">
+                <div className="mb-8">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+                    <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
                   </div>
-                  
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: "Poppins" }}>
-                    Ready to Get Started?
-                  </h3>
-                  
-                  <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                    Use the <span className="text-cyan-400 font-semibold">chat widget</span> in the bottom right corner to connect with our team. Simply click "Have a question?" and start a conversation.
-                  </p>
-                  
-                  <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
-                    <p className="text-muted-foreground mb-4">
-                      Our AI consultants will respond within <span className="text-cyan-400 font-semibold">24 hours</span> with a custom automation strategy tailored to your business.
-                    </p>
-                    <div className="space-y-3 text-sm text-muted-foreground">
-                      <div className="flex items-center justify-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span>Instant messaging with our team</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span>Mobile-friendly and secure</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span>Available 24/7 for your questions</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-muted-foreground text-sm">
-                    The chat widget is the fastest way to reach our team and get started with your AI automation journey.
-                  </p>
                 </div>
+                
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" style={{ fontFamily: "Poppins" }}>
+                  Ready to Get Started?
+                </h3>
+                
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                  Use the <span className="text-cyan-400 font-semibold">chat widget</span> in the bottom right corner to connect with our team. Simply click "Have a question?" and start a conversation.
+                </p>
+                
+                <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">
+                  <p className="text-muted-foreground mb-4">
+                    Our AI consultants will respond within <span className="text-cyan-400 font-semibold">24 hours</span> with a custom automation strategy tailored to your business.
+                  </p>
+                  <div className="space-y-3 text-sm text-muted-foreground">
+                    <div className="flex items-center justify-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <span>Instant messaging with our team</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <span>Mobile-friendly and secure</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      <span>Available 24/7 for your questions</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <p className="text-muted-foreground text-sm">
+                  The chat widget is the fastest way to reach our team and get started with your AI automation journey.
+                </p>
+              </div>
             </div>
 
             {/* Trust note below form */}
