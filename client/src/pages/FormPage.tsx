@@ -543,7 +543,6 @@ export default function FormPage() {
                     The chat widget is the fastest way to reach our team and get started with your AI automation journey.
                   </p>
                 </div>
-              </div>
             </div>
 
             {/* Trust note below form */}
